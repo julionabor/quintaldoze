@@ -149,21 +149,68 @@
 
 })(jQuery);
 // funçao da seleção de box nos cards
- function selectBox(tipo, plano, preco, el) {
-    // remove selecção anterior
-    el.closest('.list-group').querySelectorAll('.list-group-item').forEach(btn => btn.classList.remove('active'));
-    // marca o actual
-    el.classList.add('active');
+function selectBox(tipo, tamanho, preco, el) {
+  // Guardar estado
+  boxState.tipo = tipo;
+  boxState.tamanho = tamanho;
+  boxState.precoBase = preco;
 
-    // mostra o botão de encomenda correspondente
-    document.querySelectorAll('[id^="btn-"]').forEach(b => b.classList.add('d-none'));
-    document.getElementById(`btn-${tipo}`).classList.remove('d-none');
+  // UX: destacar opção selecionada
+  document.querySelectorAll(".list-group-item").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  el.classList.add("active");
 
-    // podes usar estes dados para envio de formulário ou integração posterior
-    console.log(`Selecionado: ${plano} (${tipo}) - ${preco}€`);
- }
+  // Mostrar botão correto
+  ["fruta", "legumes", "mista"].forEach(t => {
+    const btn = document.getElementById(`btn-${t}`);
+    if (btn) btn.classList.add("d-none");
+  });
+  document.getElementById(`btn-${tipo}`).classList.remove("d-none");
+
+  // Atualizar tabela e valor
+  renderBoxTable(tipo);
+  updateBoxTotal();
+}
 // recorrencia
 function highlightPlan(card) {
     document.querySelectorAll('.plan-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
   }
+//   box data
+function renderBoxTable(tipo) {
+  const tableBody = document.getElementById("boxTableBody");
+  tableBody.innerHTML = "";
+
+  if (!boxData[tipo]) return;
+
+  boxData[tipo].forEach(item => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${item.produto}</td>
+      <td>${item.quantidade}</td>
+    `;
+    tableBody.appendChild(row);
+  });
+}
+function updateBoxTotal() {
+  let total = boxState.precoBase;
+
+  // Ajuste por sazonalidade (preparado para futuro)
+  if (boxState.sazonalidade === "fora") {
+    total *= 1.1; // +10%
+  }
+
+  // Ajuste por frequência (exemplo)
+  if (boxState.frequencia === "semanal") {
+    total *= 0.95; // -5%
+  } else if (boxState.frequencia === "quinzenal") {
+    total *= 0.98; // -2%
+  }
+
+  document.getElementById("boxTotalValue").innerText =
+    total.toFixed(2) + " €";
+}
+document.getElementById("boxResumo").scrollIntoView({
+  behavior: "smooth"
+});
