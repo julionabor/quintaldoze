@@ -469,28 +469,10 @@
 			<p class="text-muted text-center mb-4">
 				Consulta os produtos frescos incluídos na tua seleção.
 			</p>
-			<div class="mx-auto justify-content-center text-center mb-4">
-				<!-- Escolha qual tipo de box -->
-				<button class="btn btn-outline-success"
-					onclick="renderBoxTable('fruta')">
-					Ver Box de Fruta
-				</button>
-				<button class="btn btn-outline-success"
-					onclick="renderBoxTable('legumes')">
-					Ver Box de Legumes
-				</button>
-				
-				<button class="btn btn-outline-success"
-					onclick="renderBoxTable('misto')">
-					Ver Box Mista
-				</button>
-			</div>
+			
   <div class="row justify-content-center">
     <div class="col-lg-8">
 
-      <h3 class="text-center mb-4">
-        O que vem na sua box
-      </h3>
 
       <div class="table-responsive">
         <table class="table table-bordered align-middle text-center">
@@ -505,19 +487,62 @@
 				<!-- Conteúdo dinâmico -->
 			</tbody>
 
-			<tfoot class="table-success">
+			<!-- <tfoot class="table-success">
 				<tr>
 				<th class="text-end">Total da Box</th>
 				<th id="boxTotalValue">—</th>
 				</tr>
-			</tfoot>
+			</tfoot> -->
 		</table>
       </div>
 
       <p class="text-muted text-center mt-3">
         As quantidades podem variar ligeiramente conforme a sazonalidade.
       </p>
+	  <div class="mt-4 border-top pt-4">
+  <h5 class="text-success fw-bold mb-3">
+    Adicionais opcionais 🧺
+  </h5>
 
+  <div class="form-check mb-2 d-flex align-items-center justify-content-between">
+  <div>
+    <input
+      class="form-check-input me-2"
+      type="checkbox"
+      id="extraOvos"
+      onchange="toggleExtra('ovos', 5)"
+    />
+    <label class="form-check-label" for="extraOvos">
+      🥚 1 dúzia de ovos caseiros
+      <span class="text-muted">( +5 € )</span>
+    </label>
+  </div>
+
+  <span class="badge bg-success">
+    ⭐ Mais popular
+  </span>
+</div>
+
+  <div class="form-check mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      id="extraAzeite"
+      onchange="toggleExtra('azeite', 5)"
+    />
+    <label class="form-check-label" for="extraAzeite">
+      🫒 0,5L de azeite caseiro
+      <span class="text-muted">( +5 € )</span>
+    </label>
+  </div>
+
+  <div class="text-end mt-3">
+    <h4 class="fw-bold">
+      Total:
+      <span id="boxTotal" class="text-success">0 €</span>
+    </h4>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -1203,8 +1228,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 		<!-- Template Javascript -->
+		<script src="js/box.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/modal.js"></script>
-		<script src="js/box.js"></script>
 	</body>
 </html>

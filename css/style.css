@@ -521,7 +521,10 @@
   #boxResumo table {
   animation: fadeIn 0.3s ease-in-out;
 }
-
+.form-check .badge {
+  font-size: 0.75rem;
+  padding: 0.4em 0.6em;
+}
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
