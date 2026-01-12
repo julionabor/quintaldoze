@@ -333,13 +333,13 @@
           <p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
 
           <div class="list-group my-3">
-            <button class="list-group-item list-group-item-action" onclick="selectBox('fruta', 'Essential', 20, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
               <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('fruta', 'Familiar', 30, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
               <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('fruta', 'Premium', 40, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
               <strong>Premium</strong> — Seleção especial + extras locais <span class="float-end fw-bold">40 €</span>
             </button>
           </div>
@@ -360,13 +360,13 @@
           <p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
 
           <div class="list-group my-3">
-            <button class="list-group-item list-group-item-action" onclick="selectBox('legumes', 'Essential', 20, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
               <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('legumes', 'Familiar', 30, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
               <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('legumes', 'Premium', 40, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
               <strong>Premium</strong> — Variedade + ervas e produtos locais <span class="float-end fw-bold">40 €</span>
             </button>
           </div>
@@ -387,13 +387,13 @@
           <p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
 
           <div class="list-group my-3">
-            <button class="list-group-item list-group-item-action" onclick="selectBox('mista', 'Essential', 20, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
               <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('mista', 'Familiar', 30, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
               <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
             </button>
-            <button class="list-group-item list-group-item-action" onclick="selectBox('mista', 'Premium', 40, this)">
+            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
               <strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
             </button>
           </div>
@@ -413,7 +413,7 @@
 		<!-- Fruits Shop End-->
 
 		<!-- Featurs Start -->
-		<section class="container py-5">
+		<section class="container py-5" id="sazonalidade">
   <div class="text-center mb-5">
     <h2 class="text-success fw-bold">Escolhe a frequência da tua Box 🌱</h2>
     <p class="text-muted">Quer frescura semanal, comodidade quinzenal ou liberdade total? Tu decides.</p>
@@ -510,7 +510,7 @@
       class="form-check-input me-2"
       type="checkbox"
       id="extraOvos"
-      onchange="toggleExtra('ovos', 5)"
+      onchange="toggleExtra('Ovos caseiros')"
     />
     <label class="form-check-label" for="extraOvos">
       🥚 1 dúzia de ovos caseiros
@@ -528,11 +528,11 @@
       class="form-check-input"
       type="checkbox"
       id="extraAzeite"
-      onchange="toggleExtra('azeite', 5)"
+      onchange="toggleExtra('Azeite caseiro')"
     />
     <label class="form-check-label" for="extraAzeite">
       🫒 0,5L de azeite caseiro
-      <span class="text-muted">( +5 € )</span>
+      <span class="text-muted">( +7 € )</span>
     </label>
   </div>
 

@@ -144,19 +144,17 @@
 	});
 })(jQuery);
 if (typeof boxProducts === "undefined") {
-  console.error("boxProducts não foi carregado");
+	console.error("boxProducts não foi carregado");
 }
 /* ===============================
    ESTADO GLOBAL DA SELEÇÃO
 ================================ */
 let selectedBox = {
-  tipo: null,
-  tamanho: null,
-  precoBase: 0,
-  extras: {
-    ovos: false,
-    azeite: false
-  }
+	tipo: null, // fruta | legumes | misto
+	plano: null, // essential | familiar | premium
+	publico: null,
+	basePrice: 0,
+	extras: {},
 };
 
 let selectedFrequency = {
@@ -167,20 +165,33 @@ let selectedFrequency = {
 /* ===============================
    SELEÇÃO DA BOX
 ================================ */
-function selectBox(tipo, tamanho, preco, element) {
-	selectedBox.tipo = tipo;
-	selectedBox.tamanho = tamanho;
-	selectedBox.precoBase = parseFloat(preco);
+function selectBox(tipo, plano, el) {
+	const box = boxProducts[tipo][plano];
+	if (!box) return;
 
-	document.querySelectorAll(".list-group-item").forEach((btn) => {
-		btn.classList.remove("active");
+	// Estado
+	selectedBox.tipo = tipo;
+	selectedBox.plano = plano;
+	selectedBox.publico = box.publico;
+	selectedBox.basePrice = Number(box.preco) || 0;
+
+	// UX: remover seleção anterior
+	document.querySelectorAll(".plan-card").forEach((card) => {
+		card.classList.remove("selected", "border-success");
 	});
 
-	element.classList.add("active");
+	// UX: aplicar seleção
+	el.classList.add("selected", "border-success");
 
-	// Renderiza produtos da box selecionada
-	renderBoxTable(tipo);
-    updateTotal();
+	renderBoxTable(tipo, plano);
+	updateTotal();
+	const sazonalidadeSection = document.getElementById("sazonalidade");
+	if (sazonalidadeSection) {
+		sazonalidadeSection.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	}
 }
 
 /* ===============================
@@ -207,59 +218,91 @@ function highlightPlan(card) {
 	}
 
 	updateTotal();
+	const boxResumo = document.getElementById("boxResumo");
+	if (boxResumo) {
+		boxResumo.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	}
 }
 
 /* ===============================
    ATUALIZA O TOTAL NA TABELA
 ================================ */
 function updateTotal() {
-	if (!selectedBox.precoBase) return;
+	let total = Number(selectedBox.basePrice) || 0;
 
-	const tableBody = document.getElementById("boxTableBody");
+	for (const extra in selectedBox.extras) {
+		if (selectedBox.extras[extra] === true) {
+			const price = Number(EXTRA_PRICES[extra]) || 0;
+			total += price;
+		}
+	}
 
-	const oldTotal = document.getElementById("boxTotalRow");
-	if (oldTotal) oldTotal.remove();
-    
-	 let total = Number(selectedBox.precoBase);
+	// Aplicar multiplicador de frequência/sazonalidade
+	const finalTotal = total * selectedFrequency.multiplier;
 
-  if (selectedBox.extras.ovos) total += 5;
-  if (selectedBox.extras.azeite) total += 5; 
-   document.getElementById("boxTotal").innerText = total.toFixed(2) + " €";
-
-
-	const totalRow = document.createElement("tr");
-	totalRow.id = "boxTotalRow";
-	totalRow.innerHTML = `
-    <td class="fw-bold text-success table-success">Total (${
-			selectedFrequency.tipo || "avulsa"
-		})</td>
-    <td class="fw-bold text-success table-success">${total} €</td>
-  `;
-
-	tableBody.appendChild(totalRow);
+	const totalEl = document.getElementById("boxTotal");
+	if (totalEl) {
+		totalEl.innerText = finalTotal.toFixed(2) + " €";
+	}
 }
-function renderBoxTable(tipo) {
+function renderBoxTable(tipo, plano) {
 	const tableBody = document.getElementById("boxTableBody");
+	if (!tableBody) return;
+
 	tableBody.innerHTML = "";
 
-	if (!boxProducts[tipo]) return;
+	const box = boxProducts[tipo][plano];
+	if (!box || !box.items) return;
 
-	boxProducts[tipo].forEach((produto) => {
+	box.items.forEach((item) => {
 		const row = document.createElement("tr");
 		row.innerHTML = `
-      <td>${produto.nome}</td>
-      <td>${produto.qtd}</td>
+      <td>${item.nome}</td>
+      <td>${item.qtd}</td>
     `;
 		tableBody.appendChild(row);
 	});
 
-	// Após renderizar os produtos, adiciona o total (se existir)
-	updateTotal();
-}   
-document.getElementById("boxResumo").scrollIntoView({
-	behavior: "smooth",
+	const publicoEl = document.getElementById("boxPublico");
+	if (publicoEl) {
+		publicoEl.innerText = box.publico;
+	}
+}
+const EXTRA_PRICES = {};
+boxProducts.extras.forEach((extra) => {
+	EXTRA_PRICES[extra.nome] = Number(extra.preco);
 });
-function toggleExtra(extra, price) {
-  selectedBox.extras[extra] = !selectedBox.extras[extra];
-  updateTotal();
+
+boxProducts.extras.forEach((extra) => {
+	EXTRA_PRICES[extra.nome] = extra.preco;
+});
+/* ====================
+GERAR EXTRAS DINAMICAMENTE
+==================== */
+function toggleExtra(extra) {
+	selectedBox.extras[extra] = !selectedBox.extras[extra];
+	updateTotal();
+}
+function renderExtras() {
+	const container = document.getElementById("extrasContainer");
+	container.innerHTML = "";
+
+	boxProducts.extras.forEach((extra) => {
+		container.innerHTML += `
+      <div class="form-check mb-2">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          onchange="toggleExtra('${extra.nome}')"
+        />
+        <label class="form-check-label">
+          ${extra.nome} (${extra.qtd})
+          <span class="text-muted">+ ${extra.preco} €</span>
+        </label>
+      </div>
+    `;
+	});
 }

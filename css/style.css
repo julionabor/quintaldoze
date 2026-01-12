@@ -529,3 +529,14 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* estilo para botões de seleção de box */
+.box-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-card.active {
+  border: 2px solid #198754;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
