@@ -4,8 +4,15 @@
 		<meta charset="utf-8" />
 		<title>Quintal do Zé - Frutas e Legumes do Produtor</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<meta content="" name="keywords" />
-		<meta content="" name="description" />
+		<meta content="frutas frescas, legumes orgânicos, produtos locais, entrega em casa, agricultura sustentável, box de frutas, box de legumes, compras online Portugal" name="keywords" />
+		<meta content="Quintal do Zé - Frutas e legumes frescos diretos do produtor local. Box orgânica semanal, quinzenal ou avulsa. Entrega em casa com qualidade garantida." name="description" />
+		<meta name="author" content="Quintal do Zé" />
+		<meta property="og:title" content="Quintal do Zé - Frutas e Legumes do Produtor" />
+		<meta property="og:description" content="Frutas e legumes frescos diretos da horta para a tua mesa. Escolhe a tua box ideal." />
+		<meta property="og:type" content="website" />
+		<meta name="theme-color" content="#198754" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="Portuguese" />
 
 		<!-- Google Web Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,25 +55,13 @@
 
 		<!-- Navbar start -->
 		<div class="container-fluid fixed-top">
-			<!-- <div class="container topbar bg-primary d-none d-lg-block">
-                <div class="d-flex justify-content-between">
-                    <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
-                    </div>
-                    <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-                    </div>
-                </div>
-            </div> -->
+			
 			<div class="container d-flex px-0">
 				<a href="index.html" class="navbar-brand"
 					><h1 class="text-primary display-6">
 						<img src="img/quintal-do-ze.png" alt="" class="logo mx-auto my-2" /></h1
 				></a>
-				<nav class="navbar navbar-light bg-white navbar-expand-xl">
+				<nav class="navbar navbar-light bg-white navbar-expand-xl w-100 justify-content-end">
 					<button
 						class="navbar-toggler py-2 px-3"
 						type="button"
@@ -75,105 +70,36 @@
 					>
 						<span class="fa fa-bars text-primary"></span>
 					</button>
-					<div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-						<div class="navbar-nav mx-auto">
-							<a href="index.html" class="nav-item nav-link active">Home</a>
-							<a href="shop.html" class="nav-item nav-link">Shop</a>
-							<a href="shop-detail.html" class="nav-item nav-link"
-								>Shop Detail</a
-							>
-							<div class="nav-item dropdown">
-								<a
-									href="#"
-									class="nav-link dropdown-toggle"
-									data-bs-toggle="dropdown"
-									>Pages</a
-								>
-								<div class="dropdown-menu m-0 bg-secondary rounded-0">
-									<a href="cart.html" class="dropdown-item">Cart</a>
-									<a href="chackout.html" class="dropdown-item">Chackout</a>
-									<a href="testimonial.html" class="dropdown-item"
-										>Testimonial</a
-									>
-									<a href="404.html" class="dropdown-item">404 Page</a>
-								</div>
-							</div>
-							<a href="contact.html" class="nav-item nav-link">Contact</a>
+					<div class="collapse navbar-collapse bg-light w-75" id="navbarCollapse">
+						<div class="navbar-nav mx-auto p-2">
+							<a href="index.html" class="nav-item nav-link active">Início</a>
+							<a href="#box" class="nav-item nav-link">Escolher Box</a>
+							<a href="#sobre-nos" class="nav-item nav-link">Quem Somos</a>
+							<a href="#contactos" class="nav-item nav-link">Contactos</a>
+							<a href="#zonas" class="nav-item nav-link">Zonas de Entrega</a>
+						
 						</div>
-						<div class="d-flex m-3 me-0">
+						<div class="d-flex justify-content-between p-2">
 							<button
-								class="btn btn-success btn-lg"
+								class="btn btn-success btn-sm my-auto"
 								data-bs-toggle="modal"
 								data-bs-target="#quizModal"
 							>
-								🥕 Me ajude a escolher a box ideal
+								🥕 Me ajude a escolher
 							</button>
-							<button
-								class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
-								data-bs-toggle="modal"
-								data-bs-target="#searchModal"
-							>
-								<i class="fas fa-search text-primary"></i>
-							</button>
-							<a href="#" class="position-relative me-4 my-auto">
-								<i class="fa fa-shopping-bag fa-2x"></i>
-								<span
-									class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-									style="top: -5px; left: 15px; height: 20px; min-width: 20px"
-									>3</span
-								>
-							</a>
-							<a href="#" class="my-auto">
+							<a href="auth.html" class="btn btn-outline-success btn-sm my-auto">	
 								<i class="fas fa-user fa-2x"></i>
 							</a>
+							</a>							
 						</div>
 					</div>
 				</nav>
 			</div>
 		</div>
-		<!-- Navbar End -->
-
-		<!-- Modal Search Start -->
-		<div
-			class="modal fade"
-			id="searchModal"
-			tabindex="-1"
-			aria-labelledby="exampleModalLabel"
-			aria-hidden="true"
-		>
-			<div class="modal-dialog modal-fullscreen">
-				<div class="modal-content rounded-0">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">
-							Search by keyword
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"
-						></button>
-					</div>
-					<div class="modal-body d-flex align-items-center">
-						<div class="input-group w-75 mx-auto d-flex">
-							<input
-								type="search"
-								class="form-control p-3"
-								placeholder="keywords"
-								aria-describedby="search-icon-1"
-							/>
-							<span id="search-icon-1" class="input-group-text p-3"
-								><i class="fa fa-search"></i
-							></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Modal Search End -->
+		<!-- Navbar End -->		
 
 		<!-- Hero Start -->
-		<div class="container-fluid py-5 mb-5 hero-header">
+		<div class="container-fluid py-2 mb-5 hero-header">
 			<div class="container py-5">
 				<div class="row g-5 align-items-center">
 					<div class="col-md-12 col-lg-7">
@@ -183,10 +109,7 @@
 						<h3 class="mb-5 display-3 text-primary">
 							Da terra à tua porta. Frescura local, sabor real.
 						</h3>
-						<!-- <div class="position-relative mx-auto">
-                            <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
-                            <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
-                        </div> -->
+						<a href="#box" class="btn btn-success py-3 px-5 me-3">Escolhe a tua Box</a>
 					</div>
 					<div class="col-md-12 col-lg-5">
 						<div
@@ -207,7 +130,7 @@
 								</div>
 								<div class="carousel-item rounded">
 									<img
-										src="img/hero-img-2.jpg"
+										src="img/legumes.png"
 										class="img-fluid w-100 h-100 rounded"
 										alt="Second slide"
 									/>
@@ -246,10 +169,64 @@
 			</div>
 		</div>
 		<!-- Hero End -->
+		<!-- About us -->
+			<section id="sobre-nos" class="py-5 bg-light">
+				<div class="container">
+					<div class="row align-items-center g-5">
 
+					<!-- Texto -->
+					<div class="col-lg-6">
+						<span class="badge bg-success mb-3">Quem somos</span>
+						<p class="text-muted mb-1">
+							Este projeto nasceu de um problema simples e muito comum:
+							querer fruta e legumes de qualidade, mas acabar sempre por
+							levar o que há — sem saber de onde vem, se é fresco ou se vale mesmo a pena.
+						</p>
+						
+						<p class="text-muted mb-2">
+							Criámos uma solução pensada para quem vive a rotina local,
+							trabalha a semana inteira e só quer chegar a casa com a certeza
+							de que está a fazer uma boa escolha — sem mercados cheios,
+							sem desperdício e sem surpresas.
+						</p>
+						<h4 class="fw-bold my-4">
+						Para quem quer comer melhor,<br class="d-none d-md-block">
+						sem perder tempo nem confiança
+						</h4>
+
+							<ul class="list-unstyled">
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Seleção semanal com critério e transparência
+							</li>
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Quantidades pensadas para a tua realidade
+							</li>
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Entrega certa, sempre ao sábado
+							</li>
+							</ul>
+						</div>
+
+					<!-- Imagem / Visual -->
+					<div class="col-lg-6 text-center">
+						<img
+						src="img/delivery.jpg"
+						alt="Fruta e legumes frescos"
+						class="img-fluid rounded-4 shadow-sm"
+						/>
+					</div>
+
+					</div>
+				</div>
+				</section>
+
+		<!-- About us End -->
 		<!-- Featurs Section Start -->
-		<div class="container-fluid featurs py-5">
-			<div class="container py-5">
+		<div class="container-fluid featurs py-2">
+			<div class="container">
 				<div class="row g-4">
 					<div class="col-md-6 col-lg-3">
 						<div class="featurs-item text-center rounded bg-light p-4">
@@ -314,155 +291,154 @@
 		<!-- Featurs Section End -->
 
 		
-		<section class="container py-5">
-  <div class="text-center mb-5">
-    <h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
-    <p class="text-muted">
-      Três tipos de produtos — três tamanhos — frescos, locais e à tua medida.
-    </p>
-  </div>
+		<section class="container py-5" id="box">
+			<div class="text-center mb-5">
+				<h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
+				<p class="text-muted">
+				Três tipos de produtos — três tamanhos — frescos, locais e à tua medida.
+				</p>
+			</div>
 
-  <div class="row g-4">
+			<div class="row g-4">
 
-    <!-- ==================== BOX FRUTA ==================== -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-success h-100">
-        <img src="img/fruite-item-6.jpg" class="img-fluid rounded-top w-100" alt="Box de Fruta" />
-        <div class="card-body">
-          <h4 class="text-success fw-bold text-center">Box de Fruta 🍏</h4>
-          <p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
+				<!-- ==================== BOX FRUTA ==================== -->
+				<div class="col-md-4">
+				<div class="card shadow-lg border-success h-100">
+					<img src="img/fruite-item-6.jpg" class="img-fluid rounded-top w-100" alt="Box de Fruta" />
+					<div class="card-body">
+					<h4 class="text-success fw-bold text-center">Box de Fruta 🍏</h4>
+					<p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
 
-          <div class="list-group my-3">
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
-              <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
-              <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
-              <strong>Premium</strong> — Seleção especial + extras locais <span class="float-end fw-bold">40 €</span>
-            </button>
-          </div>
+					<div class="list-group my-3">
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
+						<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
+						<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
+						<strong>Premium</strong> — Seleção especial + extras locais <span class="float-end fw-bold">40 €</span>
+						</button>
+					</div>
 
-          <div class="text-center mt-4">
-            <button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
-          </div>
-        </div>
-      </div>
-    </div>
+					<div class="text-center mt-4">
+						<button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
+					</div>
+					</div>
+				</div>
+				</div>
 
-    <!-- ==================== BOX LEGUMES ==================== -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-success h-100">
-        <img src="img/vegetable-item-5.jpg" class="img-fluid rounded-top w-100 " alt="Box de Legumes" />
-        <div class="card-body">
-          <h4 class="text-success fw-bold text-center">Box de Legumes 🥕</h4>
-          <p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
+				<!-- ==================== BOX LEGUMES ==================== -->
+				<div class="col-md-4">
+				<div class="card shadow-lg border-success h-100">
+					<img src="img/vegetable-item-5.jpg" class="img-fluid rounded-top w-100 " alt="Box de Legumes" />
+					<div class="card-body">
+					<h4 class="text-success fw-bold text-center">Box de Legumes 🥕</h4>
+					<p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
 
-          <div class="list-group my-3">
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
-              <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
-              <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
-              <strong>Premium</strong> — Variedade + ervas e produtos locais <span class="float-end fw-bold">40 €</span>
-            </button>
-          </div>
+					<div class="list-group my-3">
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
+						<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
+						<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
+						<strong>Premium</strong> — Variedade + ervas e produtos locais <span class="float-end fw-bold">40 €</span>
+						</button>
+					</div>
 
-          <div class="text-center mt-4">
-            <button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+					<div class="text-center mt-4">
+						<button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
+					</div>
+					</div>
+				</div>
+				</div>
 
-    <!-- ==================== BOX MISTA ==================== -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-success h-100">
-        <img src="img/hero-img-1.png" class="img-fluid rounded-top w-100" alt="Box Mista" />
-        <div class="card-body">
-          <h4 class="text-success fw-bold text-center">Box Mista 🍇</h4>
-          <p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
+				<!-- ==================== BOX MISTA ==================== -->
+				<div class="col-md-4">
+				<div class="card shadow-lg border-success h-100">
+					<img src="img/hero-img-1.png" class="img-fluid rounded-top w-100" alt="Box Mista" />
+					<div class="card-body">
+					<h4 class="text-success fw-bold text-center">Box Mista 🍇</h4>
+					<p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
 
-          <div class="list-group my-3">
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
-              <strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
-              <strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-            </button>
-            <button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
-              <strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
-            </button>
-          </div>
+					<div class="list-group my-3">
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
+						<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
+						<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+						</button>
+						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
+						<strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
+						</button>
+					</div>
 
-          <div class="text-center mt-4">
-            <button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
-          </div>
-        </div>
-      </div>
-    </div>
+					<div class="text-center mt-4">
+						<button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
+					</div>
+					</div>
+				</div>
+				</div>
 
-  </div>
-</section>
+			</div>
+		</section>
 
 
 
 		<!-- Fruits Shop End-->
 
 		<!-- Featurs Start -->
-		<section class="container py-5" id="sazonalidade">
-  <div class="text-center mb-5">
-    <h2 class="text-success fw-bold">Escolhe a frequência da tua Box 🌱</h2>
-    <p class="text-muted">Quer frescura semanal, comodidade quinzenal ou liberdade total? Tu decides.</p>
-  </div>
+		<section class="container py-5 d-none" id="sazonalidade">
+			<div class="text-center mb-5">
+				<h2 class="text-success fw-bold">Escolhe a frequência da tua Box 🌱</h2>
+				<p class="text-muted">Quer frescura semanal, comodidade quinzenal ou liberdade total? Tu decides.</p>
+			</div>
+			<div class="row g-4 text-center">
+				<!-- Semanal -->
+				<div class="col-md-4">
+				<div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
+					<!-- <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="Plano Semanal" /> -->
+					<div class="card-body">
+					<h4 class="text-success fw-bold">Semanal 🧺</h4>
+					<p class="text-muted">Recebe o teu cabaz todas as semanas, sempre colhido fresco.</p>
+					<span class="badge bg-success mb-2">Mais fresco e económico</span>
+					<button class="btn btn-success w-100 mt-2">Escolher plano semanal</button>
+					</div>
+				</div>
+				</div>
 
-  <div class="row g-4 text-center">
+				<!-- Quinzenal -->
+				<div class="col-md-4">
+				<div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
+					<!-- <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="Plano Quinzenal" /> -->
+					<div class="card-body">
+					<h4 class="text-success fw-bold">Quinzenal 🍓</h4>
+					<p class="text-muted">Cabaz entregue a cada duas semanas, ideal para pequenas famílias.</p>
+					<span class="badge bg-secondary mb-2">Equilíbrio e praticidade</span>
+					<button class="btn btn-success w-100 mt-2">Escolher plano quinzenal</button>
+					</div>
+				</div>
+				</div>
 
-    <!-- Semanal -->
-    <div class="col-md-4">
-      <div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
-        <!-- <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="Plano Semanal" /> -->
-        <div class="card-body">
-          <h4 class="text-success fw-bold">Semanal 🧺</h4>
-          <p class="text-muted">Recebe o teu cabaz todas as semanas, sempre colhido fresco.</p>
-          <span class="badge bg-success mb-2">Mais fresco e económico</span>
-          <button class="btn btn-success w-100 mt-2">Escolher plano semanal</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quinzenal -->
-    <div class="col-md-4">
-      <div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
-        <!-- <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="Plano Quinzenal" /> -->
-        <div class="card-body">
-          <h4 class="text-success fw-bold">Quinzenal 🍓</h4>
-          <p class="text-muted">Cabaz entregue a cada duas semanas, ideal para pequenas famílias.</p>
-          <span class="badge bg-secondary mb-2">Equilíbrio e praticidade</span>
-          <button class="btn btn-success w-100 mt-2">Escolher plano quinzenal</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Avulsa -->
-    <div class="col-md-4">
-      <div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
-        <!-- <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="Compra Avulsa" /> -->
-        <div class="card-body">
-          <h4 class="text-success fw-bold">Avulsa 🥦</h4>
-          <p class="text-muted">Compra quando quiseres, sem compromisso nem recorrência.</p>
-          <span class="badge bg-warning text-dark mb-2">Liberdade total</span>
-          <button class="btn btn-success w-100 mt-2">Comprar box avulsa</button>
-        </div>
-      </div>
-    </div>
-  </div>
+				<!-- Avulsa -->
+				<div class="col-md-4">
+				<div class="card shadow-sm border-success h-100 plan-card" onclick="highlightPlan(this)">
+					<!-- <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="Compra Avulsa" /> -->
+					<div class="card-body">
+					<h4 class="text-success fw-bold">Avulsa 🥦</h4>
+					<p class="text-muted">Compra quando quiseres, sem compromisso nem recorrência.</p>
+					<span class="badge bg-warning text-dark mb-2">Liberdade total</span>
+					<button class="btn btn-success w-100 mt-2">Comprar box avulsa</button>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
 		<!-- Featurs End -->
 		<!-- Vesitable Shop Start-->
-		<section class="container my-5" id="boxResumo">
+		<section class="container my-5 d-none" id="boxResumo">
 			<h2 class="text-success fw-bold text-center mb-4">
 				O que vem na tua box
 			</h2>
@@ -487,12 +463,6 @@
 				<!-- Conteúdo dinâmico -->
 			</tbody>
 
-			<!-- <tfoot class="table-success">
-				<tr>
-				<th class="text-end">Total da Box</th>
-				<th id="boxTotalValue">—</th>
-				</tr>
-			</tfoot> -->
 		</table>
       </div>
 
@@ -542,298 +512,29 @@
       <span id="boxTotal" class="text-success">0 €</span>
     </h4>
   </div>
+  <div class="text-end mt-3">
+    <button class="btn btn-success" onclick="confirmOrder()">Confirmar encomenda</button>
+  </div>
 </div>
     </div>
   </div>
 </section>
-		<!-- <div class="container-fluid vesitable py-5">
-			<div class="container py-5">
-				<h1 class="mb-0">Fresh Organic Vegetais</h1>
-				<div class="owl-carousel vegetable-carousel justify-content-center">
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-6.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Parsely</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-1.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Parsely</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-3.png"
-								class="img-fluid w-100 rounded-top bg-light"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Banana</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-4.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Bell Papper</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-5.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Potatoes</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-6.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Parsely</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-5.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Potatoes</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="vesitable-img">
-							<img
-								src="img/vegetable-item-6.jpg"
-								class="img-fluid w-100 rounded-top"
-								alt=""
-							/>
-						</div>
-						<div
-							class="text-white bg-primary px-3 py-1 rounded position-absolute"
-							style="top: 10px; right: 10px"
-						>
-							Vegetable
-						</div>
-						<div class="p-4 rounded-bottom">
-							<h4>Parsely</h4>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-								eiusmod te incididunt
-							</p>
-							<div class="d-flex justify-content-between flex-lg-wrap">
-								<p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
-								<a
-									href="#"
-									class="btn border border-secondary rounded-pill px-3 text-primary"
-									><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-									cart</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- Vesitable Shop End -->
+		
 
 		<!-- Banner Section Start-->
-		<div class="container-fluid banner bg-secondary my-5">
+		<div class="container-fluid banner bg-dark my-5">
 			<div class="container py-5">
 				<div class="row g-4 align-items-center">
 					<div class="col-lg-6">
 						<div class="py-4">
-							<h1 class="display-3 text-white">Produtos Orgânicos</h1>
-							<p class="fw-normal display-3 text-dark mb-4">Diretamente do produtor</p>
-							<p class="mb-4 text-dark">
+							<h1 class="display-3 text-secondary">Diretamente do produtor</h1>
+							<p class="mb-4 text-white">
 								Valorizamos a produção local e criamos um espaço em que podemos ligar-te diretamente aos
 								agricultores locais que possuem produtos bastante superiores ao supermercado por um valor bastante abaixo do habitual.
 							</p>
 							<a
 								href="#"
-								class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5"
+								class="banner-btn btn border-2 border-white rounded-pill text-secondary py-3 px-5"
 								>Saber mais</a
 							>
 						</div>
@@ -841,16 +542,16 @@
 					<div class="col-lg-6">
 						<div class="position-relative">
 							<img
-								src="img/baner-1.png"
+								src="img/produtora.jpg"
 								class="img-fluid w-100 rounded"
 								alt=""
 							/>
 							<div
-								class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute"
+								class="d-flex align-items-center justify-content-center bg-secondary rounded-circle position-absolute"
 								style="width: 140px; height: 140px; top: 0; left: 0"
 							>
 								
-								<div class="d-flex flex-column">
+								<div class="d-flex flex-column text-white">
 									<span class="h2 mb-0">100%</span>
 									<span class="h4 text-muted mb-0">Orgânico</span>
 								</div>
@@ -862,355 +563,291 @@
 		</div>
 		<!-- Banner Section End -->
 
-		
-
-		<!-- Fact Start -->
-		<!-- <div class="container-fluid py-5">
+		<!-- Contactos -->
+		 <section id="contactos" class="py-5 bg-light">
 			<div class="container">
-				<div class="bg-light p-5 rounded">
-					<div class="row g-4 justify-content-center">
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<div class="counter bg-white rounded p-5">
-								<i class="fa fa-users text-secondary"></i>
-								<h4>satisfied customers</h4>
-								<h1>1963</h1>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<div class="counter bg-white rounded p-5">
-								<i class="fa fa-users text-secondary"></i>
-								<h4>quality of service</h4>
-								<h1>99%</h1>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<div class="counter bg-white rounded p-5">
-								<i class="fa fa-users text-secondary"></i>
-								<h4>quality certificates</h4>
-								<h1>33</h1>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-6 col-xl-3">
-							<div class="counter bg-white rounded p-5">
-								<i class="fa fa-users text-secondary"></i>
-								<h4>Available Products</h4>
-								<h1>789</h1>
-							</div>
-						</div>
-					</div>
+				<div class="row justify-content-center mb-4">
+				<div class="col-lg-7 text-center">
+					<span class="badge bg-success mb-3">Contacto rápido</span>
+					<h2 class="fw-bold mb-3">
+					Fala connosco da forma mais simples
+					</h2>
+					<p class="text-muted">
+					Estamos disponíveis nos canais que já usas no dia a dia.
+					</p>
 				</div>
-			</div>
-		</div> -->
-		<!-- Fact Start -->
+				</div>
 
-		<!-- Tastimonial Start -->
-		<!-- <div class="container-fluid testimonial py-5">
-			<div class="container py-5">
-				<div class="testimonial-header text-center">
-					<h4 class="text-primary">Our Testimonial</h4>
-					<h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
+				<div class="row g-4 justify-content-center">
+
+				<!-- WhatsApp -->
+				<div class="col-md-4">
+					<a href="https://wa.me/351938020511?text=Olá!%20Gostava%20de%20saber%20mais%20sobre%20as%20vossas%20boxes."
+					target="_blank"
+					class="card border-0 shadow-sm h-100 rounded-4 text-decoration-none contact-card">
+
+					<div class="card-body p-4 text-center">
+						<i class="bi bi-whatsapp display-4 text-success mb-3"></i>
+						<h5 class="fw-semibold mb-2">WhatsApp</h5>
+						<p class="text-muted small mb-3">
+						Resposta rápida para dúvidas, alterações ou apoio.
+						</p>
+						<span class="btn btn-success btn-sm px-4">
+						Falar agora
+						</span>
+					</div>
+
+					</a>
 				</div>
-				<div class="owl-carousel testimonial-carousel">
-					<div class="testimonial-item img-border-radius bg-light rounded p-4">
-						<div class="position-relative">
-							<i
-								class="fa fa-quote-right fa-2x text-secondary position-absolute"
-								style="bottom: 30px; right: 0"
-							></i>
-							<div class="mb-4 pb-4 border-bottom border-secondary">
-								<p class="mb-0">
-									Lorem Ipsum is simply dummy text of the printing Ipsum has
-									been the industry's standard dummy text ever since the 1500s,
-								</p>
-							</div>
-							<div class="d-flex align-items-center flex-nowrap">
-								<div class="bg-secondary rounded">
-									<img
-										src="img/testimonial-1.jpg"
-										class="img-fluid rounded"
-										style="width: 100px; height: 100px"
-										alt=""
-									/>
-								</div>
-								<div class="ms-4 d-block">
-									<h4 class="text-dark">Client Name</h4>
-									<p class="m-0 pb-3">Profession</p>
-									<div class="d-flex pe-5">
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star"></i>
-									</div>
-								</div>
-							</div>
-						</div>
+
+				<!-- Instagram -->
+				<div class="col-md-4">
+					<a href="https://instagram.com/quintaldozedelivery"
+					target="_blank"
+					class="card border-0 shadow-sm h-100 rounded-4 text-decoration-none contact-card">
+
+					<div class="card-body p-4 text-center">
+						<i class="bi bi-instagram display-4 text-danger mb-3"></i>
+						<h5 class="fw-semibold mb-2">Instagram</h5>
+						<p class="text-muted small mb-3">
+						Acompanha novidades, sazonalidade e bastidores.
+						</p>
+						<span class="btn btn-outline-dark btn-sm px-4">
+						Ver perfil
+						</span>
 					</div>
-					<div class="testimonial-item img-border-radius bg-light rounded p-4">
-						<div class="position-relative">
-							<i
-								class="fa fa-quote-right fa-2x text-secondary position-absolute"
-								style="bottom: 30px; right: 0"
-							></i>
-							<div class="mb-4 pb-4 border-bottom border-secondary">
-								<p class="mb-0">
-									Lorem Ipsum is simply dummy text of the printing Ipsum has
-									been the industry's standard dummy text ever since the 1500s,
-								</p>
-							</div>
-							<div class="d-flex align-items-center flex-nowrap">
-								<div class="bg-secondary rounded">
-									<img
-										src="img/testimonial-1.jpg"
-										class="img-fluid rounded"
-										style="width: 100px; height: 100px"
-										alt=""
-									/>
-								</div>
-								<div class="ms-4 d-block">
-									<h4 class="text-dark">Client Name</h4>
-									<p class="m-0 pb-3">Profession</p>
-									<div class="d-flex pe-5">
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-									</div>
-								</div>
-							</div>
-						</div>
+
+					</a>
+				</div>
+
+				<!-- Email (discreto) -->
+				<div class="col-md-4">
+					<a href="mailto:geral.quintaldoze@gmail.com?subject=Contacto%20Quintal%20do%20Zé&body=Olá!%20Gostava%20de%20saber%20mais%20sobre%20as%20vossas%20boxes."
+					class="card border-0 shadow-sm h-100 rounded-4 text-decoration-none contact-card">
+
+					<div class="card-body p-4 text-center">
+						<i class="bi bi-envelope display-4 text-secondary mb-3"></i>
+						<h5 class="fw-semibold mb-2">Email</h5>
+						<p class="text-muted small mb-3">
+						Para contactos mais formais.
+						</p>
+						<span class="btn btn-outline-secondary btn-sm px-4">
+						Enviar email
+						</span>
 					</div>
-					<div class="testimonial-item img-border-radius bg-light rounded p-4">
-						<div class="position-relative">
-							<i
-								class="fa fa-quote-right fa-2x text-secondary position-absolute"
-								style="bottom: 30px; right: 0"
-							></i>
-							<div class="mb-4 pb-4 border-bottom border-secondary">
-								<p class="mb-0">
-									Lorem Ipsum is simply dummy text of the printing Ipsum has
-									been the industry's standard dummy text ever since the 1500s,
-								</p>
-							</div>
-							<div class="d-flex align-items-center flex-nowrap">
-								<div class="bg-secondary rounded">
-									<img
-										src="img/testimonial-1.jpg"
-										class="img-fluid rounded"
-										style="width: 100px; height: 100px"
-										alt=""
-									/>
-								</div>
-								<div class="ms-4 d-block">
-									<h4 class="text-dark">Client Name</h4>
-									<p class="m-0 pb-3">Profession</p>
-									<div class="d-flex pe-5">
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-										<i class="fas fa-star text-primary"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+					</a>
+				</div>
+
 				</div>
 			</div>
-		</div> -->
-		<!-- Tastimonial End -->
+			</section>
+
+			<!-- End Contacts -->
+		<!-- Zonas Abrangidas -->
+		 <section id="zonas" class="py-5 bg-light">
+			<div class="container">
+				<div class="row align-items-center g-5">
+
+				<!-- Lado esquerdo -->
+				<div class="col-lg-6">
+					<span class="badge bg-success mb-3">Zonas de entrega</span>
+
+					<h2 class="fw-bold mb-3">
+					Entregamos perto de ti
+					</h2>
+
+					<p class="text-muted mb-4">
+					São João da Madeira e um raio aproximado de
+					<strong>15 km</strong>. Entregas ao sábado.
+					</p>
+
+					<div class="card border-0 shadow-sm rounded-4 p-4">
+					<label class="form-label fw-semibold">
+						Verifica a tua zona
+					</label>
+
+					<div class="input-group input-group-lg">
+						<input
+						type="text"
+						id="postalCode"
+						class="form-control"
+						placeholder="ex: 3700-000"
+						/>
+						<button class="btn btn-success" onclick="checkZone()">
+						Verificar
+						</button>
+					</div>
+
+					<div id="zoneResult" class="mt-3"></div>
+					</div>
+				</div>
+
+				<!-- Mapa -->
+				<div class="col-lg-6">
+					<div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+					<div id="map" style="height: 360px;">
+						<img src="img/mapa.png" alt="Zona Abrangida" class="img-fluid w-100 h-100 object-cover" />
+						
+					</div>
+
+					<div class="p-3 text-center bg-dark text-white-50 small">
+						Área ilustrativa · Confirma sempre a tua morada
+					</div>
+					</div>
+				</div>
+
+				</div>
+			</div>
+			</section>
+
+
+
+			<!-- End Zonas Abrangidas -->
 		<!-- MODAL -->
-		<!-- Modal do Quiz -->
-   <!-- Modal do Quiz -->
-  <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+			<!-- Modal do Quiz -->
+			<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
 
-        <div class="modal-header">
-          <h5 class="modal-title">🥕 Escolhe a tua box ideal</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
+					<div class="modal-header">
+					<h5 class="modal-title">🥕 Escolhe a tua box ideal</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+					</div>
 
-        <div class="modal-body">
-          <div class="progress mb-3" style="height: 10px;">
-            <div id="progress-bar" class="progress-bar bg-success" style="width: 0%;"></div>
-          </div>
+					<div class="modal-body">
+					<div class="progress mb-3" style="height: 10px;">
+						<div id="progress-bar" class="progress-bar bg-success" style="width: 0%;"></div>
+					</div>
 
-          <!-- Perguntas -->
-          <div class="question active" id="q1">
-            <h5>Quantas pessoas há em casa?</h5>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '1pessoa')">🧍 1 pessoa</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '2a3')">👩‍👩‍👧 2 a 3 pessoas</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '4mais')">👨‍👩‍👧‍👦 4 ou mais</button>
-          </div>
+					<!-- Perguntas -->
+					<div class="question active" id="q1">
+						<h5>Quantas pessoas há em casa?</h5>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '1pessoa')">🧍 1 pessoa</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '2a3')">👩‍👩‍👧 2 a 3 pessoas</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '4mais')">👨‍👩‍👧‍👦 4 ou mais</button>
+					</div>
 
-          <div class="question" id="q2">
-            <h5>Preferes mais frutas, legumes ou equilíbrio?</h5>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'frutas')">🍎 Mais frutas</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'legumes')">🥕 Mais legumes</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'equilibrado')">🍇 Equilibrado</button>
-          </div>
+					<div class="question" id="q2">
+						<h5>Preferes mais frutas, legumes ou equilíbrio?</h5>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'frutas')">🍎 Mais frutas</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'legumes')">🥕 Mais legumes</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'equilibrado')">🍇 Equilibrado</button>
+					</div>
 
-          <div class="question" id="q3">
-            <h5>Com que frequência gostarias de receber a tua box?</h5>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'semanal')">📅 Uma vez por semana</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'quinzenal')">🗓️ A cada duas semanas</button>
-            <button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'avulsa')">🚛 Só quando quiser</button>
-          </div>
+					<div class="question" id="q3">
+						<h5>Com que frequência gostarias de receber a tua box?</h5>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'semanal')">📅 Uma vez por semana</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'quinzenal')">🗓️ A cada duas semanas</button>
+						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'avulsa')">🚛 Só quando quiser</button>
+					</div>
 
-          <div class="question" id="q4">
-            <h5>Queres incluir produtos locais surpresa da época?</h5>
-            <button class="btn btn-outline-success btn-option" onclick="finishQuiz('sim')">🌻 Sim, adoro novidades</button>
-            <button class="btn btn-outline-success btn-option" onclick="finishQuiz('nao')">🍂 Prefiro saber sempre o que vem</button>
-          </div>
+					<div class="question" id="q4">
+						<h5>Queres incluir produtos locais surpresa da época?</h5>
+						<button class="btn btn-outline-success btn-option" onclick="finishQuiz('sim')">🌻 Sim, adoro novidades</button>
+						<button class="btn btn-outline-success btn-option" onclick="finishQuiz('nao')">🍂 Prefiro saber sempre o que vem</button>
+					</div>
 
-          <!-- Resultado -->
-          <div id="result">
-            <h4 class="mb-3">🎉 A tua box ideal é:</h4>
-            <div id="boxName" class="fs-5 fw-bold mb-3 text-success"></div>
-            <p id="boxDesc" class="mb-4"></p>
-            <a href="#" class="btn btn-success mb-3">Ver detalhes da box</a>
-            <br>
-            <button class="btn btn-outline-secondary" onclick="resetQuiz()">🔄 Fazer novamente</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+					<!-- Resultado -->
+					<div id="result">
+						<h4 class="mb-3">🎉 A tua box ideal é:</h4>
+						<div id="boxName" class="fs-5 fw-bold mb-3 text-success"></div>
+						<p id="boxDesc" class="mb-4"></p>
+						<a href="#" class="btn btn-success mb-3">Ver detalhes da box</a>
+						<br>
+						<button class="btn btn-outline-secondary" onclick="resetQuiz()">🔄 Fazer novamente</button>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
 		<!-- END MODAL -->
 		<!-- Footer Start -->
-		<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-			<div class="container py-5">
-				<div
-					class="pb-4 mb-4"
-					style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)"
-				>
-					<div class="row g-4">
-						<div class="col-lg-3">
-							<a href="#">
-								<h1 class="text-primary mb-0">Fruitables</h1>
-								<p class="text-secondary mb-0">Fresh products</p>
-							</a>
-						</div>
-						<div class="col-lg-6">
-							<div class="position-relative mx-auto">
-								<input
-									class="form-control border-0 w-100 py-3 px-4 rounded-pill"
-									type="number"
-									placeholder="Your Email"
-								/>
-								<button
-									type="submit"
-									class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white"
-									style="top: 0; right: 0"
-								>
-									Subscribe Now
-								</button>
-							</div>
-						</div>
-						<div class="col-lg-3">
-							<div class="d-flex justify-content-end pt-3">
-								<a
-									class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-									href=""
-									><i class="fab fa-twitter"></i
-								></a>
-								<a
-									class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-									href=""
-									><i class="fab fa-facebook-f"></i
-								></a>
-								<a
-									class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-									href=""
-									><i class="fab fa-youtube"></i
-								></a>
-								<a
-									class="btn btn-outline-secondary btn-md-square rounded-circle"
-									href=""
-									><i class="fab fa-linkedin-in"></i
-								></a>
-							</div>
-						</div>
-					</div>
+		<section id="zonas" class="py-5 bg-light">
+			<footer class="bg-dark text-white pt-5">
+				<div class="container">
+				<!-- Linha principal -->
+				<div class="row g-4 pb-4 border-bottom border-secondary-subtle">
+
+				<!-- Marca -->
+				<div class="col-lg-4">
+					<h4 class="fw-bold text-white mb-2">Quintal do Zé</h4>
+					<p class="text-white-50 small mb-3">
+					Fruta e legumes frescos, pensados para a rotina local e entregues
+					com simplicidade todos os sábados.
+					</p>
+
+					<span class="badge bg-success">Projeto local</span>
 				</div>
-				<div class="row g-5">
-					<div class="col-lg-3 col-md-6">
-						<div class="footer-item">
-							<h4 class="text-light mb-3">Why People Like us!</h4>
-							<p class="mb-4">
-								typesetting, remaining essentially unchanged. It was popularised
-								in the 1960s with the like Aldus PageMaker including of Lorem
-								Ipsum.
-							</p>
-							<a
-								href=""
-								class="btn border-secondary py-2 px-4 rounded-pill text-primary"
-								>Read More</a
-							>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="d-flex flex-column text-start footer-item">
-							<h4 class="text-light mb-3">Shop Info</h4>
-							<a class="btn-link" href="">About Us</a>
-							<a class="btn-link" href="">Contact Us</a>
-							<a class="btn-link" href="">Privacy Policy</a>
-							<a class="btn-link" href="">Terms & Condition</a>
-							<a class="btn-link" href="">Return Policy</a>
-							<a class="btn-link" href="">FAQs & Help</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="d-flex flex-column text-start footer-item">
-							<h4 class="text-light mb-3">Account</h4>
-							<a class="btn-link" href="">My Account</a>
-							<a class="btn-link" href="">Shop details</a>
-							<a class="btn-link" href="">Shopping Cart</a>
-							<a class="btn-link" href="">Wishlist</a>
-							<a class="btn-link" href="">Order History</a>
-							<a class="btn-link" href="">International Orders</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="footer-item">
-							<h4 class="text-light mb-3">Contact</h4>
-							<p>Address: 1429 Netus Rd, NY 48247</p>
-							<p>Email: Example@gmail.com</p>
-							<p>Phone: +0123 4567 8910</p>
-							<p>Payment Accepted</p>
-							<img src="img/payment.png" class="img-fluid" alt="" />
-						</div>
-					</div>
+
+				<!-- Navegação -->
+				<div class="col-lg-4">
+					<h6 class="text-uppercase text-secondary mb-3">Explorar</h6>
+					<ul class="list-unstyled">
+					<li><i class="bi bi-box-seam me-2"></i> <a href="#boxes" class="text-white text-decoration-none">Boxes</a></li>
+					<li><i class="bi bi-person me-2"></i> <a href="#sobre-nos" class="text-white text-decoration-none">Quem está por trás</a></li>
+					<li><i class="bi bi-map me-2"></i> <a href="#zonas" class="text-white text-decoration-none">Zonas de entrega</a></li>
+					<li><i class="bi bi-envelope me-2"></i> <a href="#contactos" class="text-white text-decoration-none">Contactos</a></li>
+					</ul>
 				</div>
+
+				<!-- Contacto rápido -->
+				<div class="col-lg-4">
+					<h6 class="text-uppercase text-secondary mb-3">Fala connosco</h6>
+
+					<div class="d-flex gap-2 mb-3">
+					<a
+						href="https://wa.me/351938020511"
+						target="_blank"
+						class="btn btn-success btn-sm px-3"
+					>
+						<i class="bi bi-whatsapp me-2"></i>WhatsApp
+					</a>
+
+					<a
+						href="https://instagram.com/quintaldozedelivery"
+						target="_blank"
+						class="btn btn-outline-light btn-sm px-3"
+					>
+						<i class="bi bi-instagram me-2"></i>Instagram
+					</a>
+					</div>
+
+					<p class="text-white small mb-0">
+					São João da Madeira <br>
+					Entregas ao sábado
+					</p>
+				</div>
+
+				</div>
+
+				<!-- Linha inferior -->
+				<div class="row py-4 align-items-center">
+
+				<div class="col-md-6 text-center text-md-start">
+					<p class="text-white small mb-0">
+					© <span id="year"></span> Quintal do Zé · Criado por Julio Nabor
+					</p>
+				</div>
+
+				<div class="col-md-6 text-center text-md-end">
+					<a href="#" class="text-white small text-decoration-none me-3">
+					Privacidade
+					</a>
+					<a href="#" class="text-white small text-decoration-none">
+					Termos
+					</a>
+				</div>
+
+				</div>
+
 			</div>
-		</div>
+			</footer>
+
+
 		<!-- Footer End -->
 
-		<!-- Copyright Start -->
-		<div class="container-fluid copyright bg-dark py-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-						<span class="text-light"
-							><a href="#"
-								><i class="fas fa-copyright text-light me-2"></i>Your Site
-								Name</a
-							>, All right reserved.</span
-						>
-					</div>
-					<div class="col-md-6 my-auto text-center text-md-end text-white">
-						<!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-						<!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-						<!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-						Designed By
-						<a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Copyright End -->
+		
 
 		<!-- Back to Top -->
 		<a
@@ -1226,10 +863,12 @@
 		<script src="lib/lightbox/js/lightbox.min.js"></script>
 		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+		
 		<!-- Template Javascript -->
 		<script src="js/box.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/modal.js"></script>
+		<script src="js/codigo-postal.js"></script>
+		<script src="js/state.js"></script>
 	</body>
 </html>

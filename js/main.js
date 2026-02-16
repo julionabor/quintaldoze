@@ -12,21 +12,21 @@
 	spinner(0);
 
 	// Fixed Navbar
-	$(window).scroll(function () {
-		if ($(window).width() < 992) {
-			if ($(this).scrollTop() > 55) {
-				$(".fixed-top").addClass("shadow");
-			} else {
-				$(".fixed-top").removeClass("shadow");
-			}
-		} else {
-			if ($(this).scrollTop() > 55) {
-				$(".fixed-top").addClass("shadow").css("top", -55);
-			} else {
-				$(".fixed-top").removeClass("shadow").css("top", 0);
-			}
-		}
-	});
+	// $(window).scroll(function () {
+	// 	if ($(window).width() < 992) {
+	// 		if ($(this).scrollTop() > 55) {
+	// 			$(".fixed-top").addClass("shadow");
+	// 		} else {
+	// 			$(".fixed-top").removeClass("shadow");
+	// 		}
+	// 	} else {
+	// 		if ($(this).scrollTop() > 55) {
+	// 			$(".fixed-top").addClass("shadow").css("top", -50);
+	// 		} else {
+	// 			$(".fixed-top").removeClass("shadow").css("top", 0);
+	// 		}
+	// 	}
+	// });
 
 	// Back to top button
 	$(window).scroll(function () {
@@ -118,7 +118,7 @@
 		$("#videoModal").on("shown.bs.modal", function (e) {
 			$("#video").attr(
 				"src",
-				$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+				$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
 			);
 		});
 
@@ -143,23 +143,36 @@
 		button.parent().parent().find("input").val(newVal);
 	});
 })(jQuery);
+const navLinks = document.querySelectorAll('.nav-link');
+const menuDropdown = document.getElementById('navbarCollapse');
+
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { new bootstrap.Collapse(menuDropdown).hide() });
+});
 if (typeof boxProducts === "undefined") {
 	console.error("boxProducts não foi carregado");
 }
 /* ===============================
    ESTADO GLOBAL DA SELEÇÃO
 ================================ */
-let selectedBox = {
-	tipo: null, // fruta | legumes | misto
-	plano: null, // essential | familiar | premium
-	publico: null,
-	basePrice: 0,
-	extras: {},
-};
 
 let selectedFrequency = {
 	tipo: null,
 	multiplier: 1,
+};
+window.selectedBox = {
+	tipo: null,
+	plano: null,
+	basePrice: 0,
+	extras: {},
+};
+
+window.userState = {
+	nome: "Utilizador Anónimo",
+	frequencia: "Quinzenal",
+	morada: "São João da Madeira",
+	contacto: "9XXXXXXXX",
+	pagamento: "MB Way",
 };
 
 /* ===============================
@@ -186,6 +199,7 @@ function selectBox(tipo, plano, el) {
 	renderBoxTable(tipo, plano);
 	updateTotal();
 	const sazonalidadeSection = document.getElementById("sazonalidade");
+	sazonalidadeSection.classList.remove("d-none");
 	if (sazonalidadeSection) {
 		sazonalidadeSection.scrollIntoView({
 			behavior: "smooth",
@@ -219,6 +233,7 @@ function highlightPlan(card) {
 
 	updateTotal();
 	const boxResumo = document.getElementById("boxResumo");
+	boxResumo.classList.remove("d-none");
 	if (boxResumo) {
 		boxResumo.scrollIntoView({
 			behavior: "smooth",
@@ -230,23 +245,27 @@ function highlightPlan(card) {
 /* ===============================
    ATUALIZA O TOTAL NA TABELA
 ================================ */
+// function updateTotal() {
+// 	let total = Number(selectedBox.basePrice) || 0;
+
+// 	for (const extra in selectedBox.extras) {
+// 		if (selectedBox.extras[extra] === true) {
+// 			const price = Number(EXTRA_PRICES[extra]) || 0;
+// 			total += price;
+// 		}
+// 	}
+
+// 	// Aplicar multiplicador de frequência/sazonalidade
+// 	const finalTotal = total * selectedFrequency.multiplier;
+
+// 	const totalEl = document.getElementById("boxTotal");
+// 	if (totalEl) {
+// 		totalEl.innerText = finalTotal.toFixed(2) + " €";
+// 	}
+// }
 function updateTotal() {
-	let total = Number(selectedBox.basePrice) || 0;
-
-	for (const extra in selectedBox.extras) {
-		if (selectedBox.extras[extra] === true) {
-			const price = Number(EXTRA_PRICES[extra]) || 0;
-			total += price;
-		}
-	}
-
-	// Aplicar multiplicador de frequência/sazonalidade
-	const finalTotal = total * selectedFrequency.multiplier;
-
-	const totalEl = document.getElementById("boxTotal");
-	if (totalEl) {
-		totalEl.innerText = finalTotal.toFixed(2) + " €";
-	}
+	const total = calculateTotal();
+	document.getElementById("boxTotal").innerText = `${total}€`;
 }
 function renderBoxTable(tipo, plano) {
 	const tableBody = document.getElementById("boxTableBody");
@@ -270,39 +289,83 @@ function renderBoxTable(tipo, plano) {
 	if (publicoEl) {
 		publicoEl.innerText = box.publico;
 	}
-}
-const EXTRA_PRICES = {};
-boxProducts.extras.forEach((extra) => {
-	EXTRA_PRICES[extra.nome] = Number(extra.preco);
-});
+	const EXTRA_PRICES = {};
+	boxProducts.extras.forEach((extra) => {
+		EXTRA_PRICES[extra.nome] = Number(extra.preco);
+	});
 
-boxProducts.extras.forEach((extra) => {
-	EXTRA_PRICES[extra.nome] = extra.preco;
-});
+	boxProducts.extras.forEach((extra) => {
+		EXTRA_PRICES[extra.nome] = extra.preco;
+	});
+}
+/* ====================
+   CALCULAR TOTAL
+==================== */
+function calculateTotal() {
+	let total = Number(selectedBox.basePrice) || 0;
+	total *= selectedFrequency.multiplier || 1;
+
+	Object.entries(selectedBox.extras).forEach(([key, extra]) => {
+		if (extra.selected) {
+			total += Number(extra.preco);
+		}
+	});
+
+	return Number(total.toFixed(2));
+}
+
 /* ====================
 GERAR EXTRAS DINAMICAMENTE
 ==================== */
-function toggleExtra(extra) {
-	selectedBox.extras[extra] = !selectedBox.extras[extra];
+// function toggleExtra(extra) {
+// 	selectedBox.extras[extra] = !selectedBox.extras[extra];
+// 	updateTotal();
+// }
+// function renderExtras() {
+// 	const container = document.getElementById("extrasContainer");
+// 	container.innerHTML = "";
+
+// 	boxProducts.extras.forEach((extra) => {
+// 		container.innerHTML += `
+//       <div class="form-check mb-2">
+//         <input
+//           class="form-check-input"
+//           type="checkbox"
+//           onchange="toggleExtra('${extra.nome}')"
+//         />
+//         <label class="form-check-label">
+//           ${extra.nome} (${extra.qtd})
+//           <span class="text-muted">+ ${extra.preco} €</span>
+//         </label>
+//       </div>
+//     `;
+// 	});
+// }
+function toggleExtra(nome) {
+	const preco = boxProducts.extras.find((e) => e.nome === nome)?.preco || 0;
+	if (!selectedBox.extras[nome]) {
+		selectedBox.extras[nome] = {
+			selected: true,
+			preco: Number(preco),
+		};
+	} else {
+		selectedBox.extras[nome].selected = !selectedBox.extras[nome].selected;
+	}
+
 	updateTotal();
 }
-function renderExtras() {
-	const container = document.getElementById("extrasContainer");
-	container.innerHTML = "";
+/* ====================
+CONFIRMAR ENCOMENDA		
+==================== */
+function confirmOrder() {
+	const payload = {
+		box: selectedBox,
+		total: calculateTotal(),
+		user: userState,
+		nextDelivery: "Sábado, 22 de Fevereiro",
+		status: "Preparação",
+	};
 
-	boxProducts.extras.forEach((extra) => {
-		container.innerHTML += `
-      <div class="form-check mb-2">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          onchange="toggleExtra('${extra.nome}')"
-        />
-        <label class="form-check-label">
-          ${extra.nome} (${extra.qtd})
-          <span class="text-muted">+ ${extra.preco} €</span>
-        </label>
-      </div>
-    `;
-	});
+	localStorage.setItem("zdcp_order", JSON.stringify(payload));
+	window.location.href = "dashboard.html";
 }

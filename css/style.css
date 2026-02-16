@@ -1,13 +1,21 @@
+section {
+  /* Substitua 80px pela altura exata do seu navbar */
+  scroll-margin-top: 100px; 
+}
 /*** Spinner Start ***/
 #spinner {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.8s ease-out, visibility 0s linear 0.5s;
+	transition:
+		opacity 0.8s ease-out,
+		visibility 0s linear 0.5s;
 	z-index: 99999;
 }
 
 #spinner.show {
-	transition: opacity 0.8s ease-out, visibility 0s linear 0s;
+	transition:
+		opacity 0.8s ease-out,
+		visibility 0s linear 0s;
 	visibility: visible;
 	opacity: 1;
 }
@@ -176,10 +184,8 @@
 
 /*** Hero Header ***/
 .hero-header {
-	background: linear-gradient(
-			rgba(248, 223, 173, 0.1),
-			rgba(248, 223, 173, 0.1)
-		),
+	background:
+		linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)),
 		url(../img/hero-img.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -221,7 +227,8 @@
 
 .page-header {
 	position: relative;
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 		url(../img/cart-page-header-img.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -490,53 +497,71 @@
 /*** Footer End ***/
 /* ediçoes sugeridas */
 .logo {
-	width: 9rem;
-	height: 9rem;
+	width: 6rem;
+	height: 6rem;
 }
 .btn-option {
-  margin: 8px 0;
-  width: 100%;
-  text-align: left;
-  transition: all 0.2s ease;
+	margin: 8px 0;
+	width: 100%;
+	text-align: left;
+	transition: all 0.2s ease;
 }
 
 .btn-option.active {
-  background-color: #198754; /* mesma cor do btn-success */
-  color: white;
-  border-color: #198754;
+	background-color: #198754; /* mesma cor do btn-success */
+	color: white;
+	border-color: #198754;
 }
 .plan-card {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
-  }
-  .plan-card.selected {
-    border: 3px solid #198754;
-    box-shadow: 0 0 20px rgba(25, 135, 84, 0.4);
-  }
-  /* tabela box */
-  #boxResumo table {
-  animation: fadeIn 0.3s ease-in-out;
+	cursor: pointer;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+.plan-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
+}
+.plan-card.selected {
+	border: 3px solid #198754;
+	box-shadow: 0 0 20px rgba(25, 135, 84, 0.4);
+}
+/* tabela box */
+#boxResumo table {
+	animation: fadeIn 0.3s ease-in-out;
 }
 .form-check .badge {
-  font-size: 0.75rem;
-  padding: 0.4em 0.6em;
+	font-size: 0.75rem;
+	padding: 0.4em 0.6em;
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /* estilo para botões de seleção de box */
 .box-card {
-  cursor: pointer;
-  transition: all 0.2s ease;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 .box-card.active {
-  border: 2px solid #198754;
-  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+	border: 2px solid #198754;
+	box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+.auth {
+	background:
+		linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+		url(../img/banner-fruits.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
