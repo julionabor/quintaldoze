@@ -1,6 +1,6 @@
 section {
-  /* Substitua 80px pela altura exata do seu navbar */
-  scroll-margin-top: 100px; 
+	/* Substitua 80px pela altura exata do seu navbar */
+	scroll-margin-top: 100px;
 }
 /*** Spinner Start ***/
 #spinner {
@@ -240,12 +240,40 @@ section {
 	.page-header {
 		margin-top: 152px !important;
 	}
+	#box {
+		display: block;
+	}
+	#box-mobile {
+		display: none;
+	}
 }
 
 @media (max-width: 992px) {
 	.hero-header,
 	.page-header {
 		margin-top: 97px !important;
+	}
+	#box {
+		display: none;
+	}
+	#box-mobile {
+		display: block;
+	}
+}
+@media (max-width: 768px) {
+	#box {
+		display: none;
+	}
+	#box-mobile {
+		display: block;
+	}
+}
+@media (min-width: 768px) {
+	#box {
+		display: block;
+	}
+	#box-mobile {
+		display: none;
 	}
 }
 /*** Hero Header end ***/
