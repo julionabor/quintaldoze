@@ -240,10 +240,10 @@ section {
 	.page-header {
 		margin-top: 152px !important;
 	}
-	#box {
+	.box-web {
 		display: block;
 	}
-	#box-mobile {
+	.box-mobile {
 		display: none;
 	}
 }
@@ -253,29 +253,29 @@ section {
 	.page-header {
 		margin-top: 97px !important;
 	}
-	#box {
+	.box-web {
 		display: none;
 	}
-	#box-mobile {
+	.box-mobile {
 		display: block;
 	}
 }
 @media (max-width: 768px) {
-	#box {
+	.box-web {
 		display: none;
 	}
-	#box-mobile {
+	.box-mobile {
 		display: block;
 	}
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 	#box {
 		display: block;
 	}
 	#box-mobile {
 		display: none;
 	}
-}
+} */
 /*** Hero Header end ***/
 
 /*** featurs Start ***/

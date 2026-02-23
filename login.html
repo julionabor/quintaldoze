@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Auth0 Vanilla JS</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="app-container">
+			<!-- Loading State -->
+			<div id="loading" class="loading-state">
+				<div class="loading-text">A carregar...</div>
+			</div>
+
+			<!-- Error State -->
+			<div id="error" class="error-state" style="display: none">
+				<div class="error-title">Oops!</div>
+				<div class="error-message">Algo correu mal</div>
+				<div id="error-details" class="error-sub-message"></div>
+			</div>
+
+			<!-- Main Content -->
+			<div id="app" class="main-card-wrapper" style="display: none">
+				<img
+					src="img/quintal-do-ze.png"
+					alt="Quintal do Zé"
+					class="auth0-logo"
+					style="max-width: 200px; margin-bottom: 1rem"
+				/>
+				<h1 class="main-title">Bem-vindo ao Quintal do Zé</h1>
+
+				<!-- Logged Out State -->
+				<div id="logged-out" class="action-card">
+					<p class="action-text">Entra na tua conta para continuar</p>
+					<button id="login-btn" class="button login">
+						🔑 Entrar com Auth0
+					</button>
+					<p style="margin-top: 1.5rem; text-align: center">
+						<a href="/" style="color: #667eea; text-decoration: none"
+							>← Voltar ao site</a
+						>
+					</p>
+				</div>
+
+				<!-- Logged In State -->
+				<div id="logged-in" class="logged-in-section" style="display: none">
+					<div class="logged-in-message">✅ Autenticação bem-sucedida!</div>
+					<h2 class="profile-section-title">Teu Perfil</h2>
+					<div id="profile" class="profile-card"></div>
+					<button id="logout-btn" class="button logout">🚪 Sair</button>
+					<p
+						style="
+							margin-top: 1.5rem;
+							text-align: center;
+							font-size: 0.9rem;
+							color: #999;
+						"
+					>
+						A redirecionar para a página inicial...
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="./auth-login.js"></script>
+	</body>
+</html>

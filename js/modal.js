@@ -43,17 +43,59 @@ function finishQuiz(finalAnswer) {
 	hideAllQuestions();
 	updateProgress(totalQuestions + 1);
 
+	// map respostas para características da box
+	const sizeKey = mapSizeAnswer(userAnswers.q1); // essential | familiar | premium
+	const typeKey = mapTypeAnswer(userAnswers.q2); // fruta | legumes | mista
 	const boxName = getBoxName(userAnswers.q1);
 	const boxDesc = buildBoxDescription(userAnswers);
 
 	document.getElementById("boxName").innerText = boxName;
 	document.getElementById("boxDesc").innerText = boxDesc;
+
+	// preparar link para levar o utilizador à escolha correcta
+	const resultLink = document.getElementById("resultLink");
+	if (resultLink) {
+		resultLink.href = "#box";
+		// prepare modal instance to hide later
+		const modalEl = document.getElementById("quizModal");
+		const modalInstance = modalEl
+			? bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl)
+			: null;
+		resultLink.onclick = function () {
+			// close modal first
+			if (modalInstance) {
+				modalInstance.hide();
+			}
+			// chamamos a função global selectBox disponível em main.js
+			if (typeof selectBox === "function") {
+				selectBox(typeKey, sizeKey, this);
+			}
+		};
+	}
 	document.getElementById("result").style.display = "block";
 }
 
 /**
  * Retorna o nome da box com base no tamanho.
  */
+function mapSizeAnswer(answer) {
+	const map = {
+		"1pessoa": "essential",
+		"2a3": "familiar",
+		"4mais": "premium",
+	};
+	return map[answer] || "essential";
+}
+
+function mapTypeAnswer(answer) {
+	const map = {
+		frutas: "fruta",
+		legumes: "legumes",
+		equilibrado: "mista",
+	};
+	return map[answer] || "mista";
+}
+
 function getBoxName(sizeAnswer) {
 	const options = {
 		"1pessoa": "Box Pequena (20€)",
@@ -124,7 +166,7 @@ function nextQuestion(current, answer) {
 		}
 	} else {
 		console.warn(
-			"handleAnswer não está definido — assegura que o script refatorado foi carregado."
+			"handleAnswer não está definido — assegura que o script refatorado foi carregado.",
 		);
 	}
 }

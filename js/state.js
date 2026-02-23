@@ -4,7 +4,6 @@ const defaultState = {
 	user: null,
 	order: null,
 };
-
 const AppState = {
 	get() {
 		return JSON.parse(localStorage.getItem(STORAGE_KEY)) || defaultState;

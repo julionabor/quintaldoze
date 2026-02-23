@@ -1,0 +1,15 @@
+{
+  "hash": "3a86cf93",
+  "configHash": "038874b7",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "9563b7ee",
+  "optimized": {
+    "@auth0/auth0-spa-js": {
+      "src": "../../server/node_modules/@auth0/auth0-spa-js/dist/auth0-spa-js.production.esm.js",
+      "file": "@auth0_auth0-spa-js.js",
+      "fileHash": "41edc856",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

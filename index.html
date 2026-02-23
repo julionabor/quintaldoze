@@ -41,6 +41,9 @@
 
 		<!-- Template Stylesheet -->
 		<link href="css/style.css" rel="stylesheet" />
+
+		<!-- Authentication Check -->
+		<script type="module" src="./auth-check.js"></script>
 	</head>
 
 	<body>
@@ -135,7 +138,7 @@
 										alt="Second slide"
 									/>
 									<a href="#" class="btn px-4 py-2 text-white rounded"
-										>Vegetais</a
+										>Legumes</a
 									>
 								</div>
 							</div>
@@ -168,330 +171,212 @@
 				</div>
 			</div>
 		</div>
-		<!-- Hero End -->
-		<!-- About us -->
-			<section id="sobre-nos" class="py-5 bg-light">
-				<div class="container">
-					<div class="row align-items-center g-5">
-
-					<!-- Texto -->
-					<div class="col-lg-6">
-						<span class="badge bg-success mb-3">Quem somos</span>
-						<p class="text-muted mb-1">
-							Este projeto nasceu de um problema simples e muito comum:
-							querer fruta e legumes de qualidade, mas acabar sempre por
-							levar o que há — sem saber de onde vem, se é fresco ou se vale mesmo a pena.
-						</p>
-						
-						<p class="text-muted mb-2">
-							Criámos uma solução pensada para quem vive a rotina local,
-							trabalha a semana inteira e só quer chegar a casa com a certeza
-							de que está a fazer uma boa escolha — sem mercados cheios,
-							sem desperdício e sem surpresas.
-						</p>
-						<h4 class="fw-bold my-4">
-						Para quem quer comer melhor,<br class="d-none d-md-block">
-						sem perder tempo nem confiança
-						</h4>
-
-							<ul class="list-unstyled">
-							<li class="mb-1">
-								<i class="bi bi-check-circle-fill text-success me-2"></i>
-								Seleção semanal com critério e transparência
-							</li>
-							<li class="mb-1">
-								<i class="bi bi-check-circle-fill text-success me-2"></i>
-								Quantidades pensadas para a tua realidade
-							</li>
-							<li class="mb-1">
-								<i class="bi bi-check-circle-fill text-success me-2"></i>
-								Entrega certa, sempre ao sábado
-							</li>
-							</ul>
-						</div>
-
-					<!-- Imagem / Visual -->
-					<div class="col-lg-6 text-center">
-						<img
-						src="img/delivery.jpg"
-						alt="Fruta e legumes frescos"
-						class="img-fluid rounded-4 shadow-sm"
-						/>
-					</div>
-
-					</div>
-				</div>
-				</section>
-
-		<!-- About us End -->
-		<!-- Featurs Section Start -->
-		<div class="container-fluid featurs py-2">
-			<div class="container">
-				<div class="row g-4">
-					<div class="col-md-6 col-lg-3">
-						<div class="featurs-item text-center rounded bg-light p-4">
-							<div
-							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
-							>
-								<i class="fas fa-car-side fa-3x text-white"></i>
-							</div>
-							<div class="featurs-content text-center">
-								<h5>Entrega em casa</h5>
-								<p class="mb-0">Rapidez e Comodidade	</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="featurs-item text-center rounded bg-light p-4">
-							<div
-							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
-							>
-								<i class="fas fa-user-shield fa-3x text-white"></i>
-							</div>
-							<div class="featurs-content text-center">
-								<h5>Pagamento Seguro</h5>
-								<p class="mb-0">
-									Praticidade e segurança
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="featurs-item text-center rounded bg-light p-4">
-							<div
-								class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
-							>
-								<i class="fas fa-exchange-alt fa-3x text-white"></i>
-							</div>
-							<div class="featurs-content text-center">
-								<h5>Qualidade</h5>
-								<p class="mb-0">Da horta para a sua mesa</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="featurs-item text-center rounded bg-light p-4">
-							<div
-							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
-							>
-								<i class="fa fa-phone-alt fa-3x text-white"></i>
-							</div>
-							<div class="featurs-content text-center">
-								<h5>Suporte Online</h5>
-								<p class="mb-0">
-									Suporte telefonico ou
-									WhatsApp
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Featurs Section End -->
-		
-		
+		<!-- Hero End -->		
+		<!-- SECTION BOX -->
 		<section class="container py-5" id="box">
-			<div class="text-center mb-5">
-				<h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
-				<p class="text-muted">
-					Três tipos de produtos — três tamanhos — frescos, locais e à tua medida.
-				</p>
-			</div>
-
-			<div class="row g-4">
-
-				<!-- ==================== BOX MISTA ==================== -->
-				<div class="col-md-4">
-					<div class="card shadow-lg border-success h-100">
-						<img src="img/hero-img-1.png" class="img-fluid rounded-top w-100 h-50" alt="Box Mista" />
+			<!-- BOX WEB -->
+			<div class="box-web">
+				<div class="text-center mb-5">
+					<h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
+					<p class="text-muted">
+						Três tipos de produtos — três tamanhos — frescos, locais e à tua medida.
+					</p>
+				</div>
+				<div class="row g-4">
+	
+					<!-- ==================== BOX MISTA ==================== -->
+					<div class="col-md-4">
+						<div class="card shadow-lg border-success h-100">
+							<img src="img/hero-img-1.png" class="img-fluid rounded-top w-100 h-50" alt="Box Mista" />
+							<div class="card-body">
+							<h4 class="text-success fw-bold text-center">Box Mista 🍇</h4>
+							<p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
+			
+							<div class="list-group my-3">
+								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
+								<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+								</button>
+								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
+								<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+								</button>
+								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
+								<strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
+								</button>
+							</div>
+			
+							<div class="text-center mt-4">
+								<button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
+							</div>
+							</div>
+						</div>
+					</div>
+					<!-- ==================== BOX FRUTA ==================== -->
+					<div class="col-md-4">
+						<div class="card shadow-lg border-success h-100">
+						<img src="img/frutas.jpg" class="img-fluid rounded-top w-100 h-50" alt="Box de Fruta" />
 						<div class="card-body">
-						<h4 class="text-success fw-bold text-center">Box Mista 🍇</h4>
-						<p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
-		
+						<h4 class="text-success fw-bold text-center">Box de Fruta 🍏</h4>
+						<p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
+	
 						<div class="list-group my-3">
-							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
 							<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
 							</button>
-							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
 							<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
 							</button>
-							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
-							<strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
+							<strong>Premium</strong> — Seleção especial + extras locais <span class="float-end fw-bold">40 €</span>
 							</button>
 						</div>
-		
+	
 						<div class="text-center mt-4">
-							<button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
+							<button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
 						</div>
 						</div>
 					</div>
-				</div>
-				<!-- ==================== BOX FRUTA ==================== -->
-				<div class="col-md-4">
+					</div>
+	
+					<!-- ==================== BOX LEGUMES ==================== -->
+					<div class="col-md-4">
 					<div class="card shadow-lg border-success h-100">
-					<img src="img/frutas.jpg" class="img-fluid rounded-top w-100 h-50" alt="Box de Fruta" />
-					<div class="card-body">
-					<h4 class="text-success fw-bold text-center">Box de Fruta 🍏</h4>
-					<p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
-
-					<div class="list-group my-3">
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
-						<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-						</button>
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
-						<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-						</button>
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
-						<strong>Premium</strong> — Seleção especial + extras locais <span class="float-end fw-bold">40 €</span>
-						</button>
+						<img src="img/legumes.png" class="img-fluid rounded-top w-100 h-50" alt="Box de Legumes" />
+						<div class="card-body">
+						<h4 class="text-success fw-bold text-center">Box de Legumes 🥕</h4>
+						<p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
+	
+						<div class="list-group my-3">
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
+							<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+							</button>
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
+							<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+							</button>
+							<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
+							<strong>Premium</strong> — Variedade + ervas e produtos locais <span class="float-end fw-bold">40 €</span>
+							</button>
+						</div>
+	
+						<div class="text-center mt-4">
+							<button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
+						</div>
+						</div>
 					</div>
-
-					<div class="text-center mt-4">
-						<button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
 					</div>
+	
+	
+				</div>
+			</div>
+			<!-- BOX MOBILE -->
+			<!-- Carousel box mobile -->
+			 <div class="container-fluid vesitable py-5 bg-light box-mobile" >
+				<div class="border border-primary rounded position-relative vesitable-item"	>
+				<div class="container py-5">
+					<h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
+					<div class="owl-carousel vegetable-carousel justify-content-center">
+						<!-- BOX MISTA -->
+						<div
+							class="border border-primary rounded position-relative vesitable-item"
+						>
+							<!-- ==================== BOX MISTA ==================== -->
+								<div class="col-md-4">
+								<div class="card shadow-lg border-success h-100">
+									<img src="img/hero-img-1.png" class="img-fluid rounded-top w-100 h-75" alt="Box Mista" />
+									<div class="card-body">
+									<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box Mista 🍇</h4>
+									<p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
+	
+									<div class="list-group my-3">
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
+										<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
+										</button>
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
+										<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
+										</button>
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
+										<strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
+										</button>
+									</div>
+	
+									<div class="text-center mt-4">
+										<button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
+									</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						<!-- ============== BOX DE FRUTA ============== -->
+						<div
+							class="border border-primary rounded position-relative vesitable-item"
+						>
+						
+							<div class="col-md-4">
+							<div class="card shadow-lg border-success h-100">
+							
+								<img src="img/frutas.jpg" class="img-fluid rounded-top w-100 h-75" alt="Box de Fruta" />
+								<div class="card-body">
+								<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box de Fruta 🍏</h4>
+								<p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
+	
+								<div class="list-group my-3">
+									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
+									<strong>Essential</strong> 1–2 px <span class="float-end fw-bold">20 €</span>
+									</button>
+									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
+									<strong>Familiar</strong> 3–4 px<span class="float-end fw-bold">30 €</span>
+									</button>
+									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
+									<strong>Premium</strong> Seleção especial	 <span class="float-end fw-bold">40 €</span>
+									</button>
+								</div>
+	
+						<div class="text-center mt-4">
+							<button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
+						</div>
+						</div>
+					</div>
+					</div>
+	
+						</div>
+						<!-- ========= BOX DE LEGUMES ========= -->
+						<div
+							class="border border-primary rounded position-relative vesitable-item"
+						>
+							<div class="col-md-4">
+								<div class="card shadow-lg border-success h-100">
+									<img src="img/legumes.png" class="img-fluid rounded-top w-100  h-75" alt="Box de Legumes" />
+									<div class="card-body">
+									<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box de Legumes 🥕</h4>
+									<p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
+	
+									<div class="list-group my-3">
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
+										<strong>Essential</strong>  Ideal para 1–2 px <span class="float-end fw-bold">20 €</span>
+										</button>
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
+										<strong>Familiar</strong> Para 3–4 px <span class="float-end fw-bold">30 €</span>
+										</button>
+										<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
+										<strong>Premium</strong> Variedade + ervas<span class="float-end fw-bold">40 €</span>
+										</button>
+									</div>
+	
+									<div class="text-center mt-4">
+										<button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
+									</div>
+									</div>
+								</div>
+							</div>
+	
+						</div>
+						
+						
 					</div>
 				</div>
-				</div>
-
-				<!-- ==================== BOX LEGUMES ==================== -->
-				<div class="col-md-4">
-				<div class="card shadow-lg border-success h-100">
-					<img src="img/legumes.png" class="img-fluid rounded-top w-100 h-50" alt="Box de Legumes" />
-					<div class="card-body">
-					<h4 class="text-success fw-bold text-center">Box de Legumes 🥕</h4>
-					<p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
-
-					<div class="list-group my-3">
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
-						<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-						</button>
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
-						<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-						</button>
-						<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
-						<strong>Premium</strong> — Variedade + ervas e produtos locais <span class="float-end fw-bold">40 €</span>
-						</button>
-					</div>
-
-					<div class="text-center mt-4">
-						<button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
-					</div>
-					</div>
-				</div>
-				</div>
-
-
+			</div> 
 			</div>
 		</section>
 		<!-- Fruits Shop End-->
-		<!-- Carousel box mobile -->
-		 <div class="container-fluid vesitable py-5 bg-light" id="box-mobile">
-			<div class="border border-primary rounded position-relative vesitable-item"	>
-			<div class="container py-5">
-				<h2 class="text-success fw-bold">Escolhe a tua Box 🍎🥕</h2>
-				<div class="owl-carousel vegetable-carousel justify-content-center">
-					<!-- BOX MISTA -->
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<!-- ==================== BOX MISTA ==================== -->
-							<div class="col-md-4">
-							<div class="card shadow-lg border-success h-100">
-								<img src="img/hero-img-1.png" class="img-fluid rounded-top w-100 h-75" alt="Box Mista" />
-								<div class="card-body">
-								<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box Mista 🍇</h4>
-								<p class="text-muted text-center">Frutas e legumes equilibrados, sempre da época.</p>
-
-								<div class="list-group my-3">
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'essential', this)">
-									<strong>Essential</strong> — Ideal para 1–2 pessoas <span class="float-end fw-bold">20 €</span>
-									</button>
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'familiar', this)">
-									<strong>Familiar</strong> — Para 3–4 pessoas <span class="float-end fw-bold">30 €</span>
-									</button>
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('mista', 'premium', this)">
-									<strong>Premium</strong> — Completa + produtos sazonais <span class="float-end fw-bold">40 €</span>
-									</button>
-								</div>
-
-								<div class="text-center mt-4">
-									<button id="btn-mista" class="btn btn-success w-100 d-none">🍇 Encomendar Box Mista</button>
-								</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					<!-- ============== BOX DE FRUTA ============== -->
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-					
-						<div class="col-md-4">
-						<div class="card shadow-lg border-success h-100">
-						
-							<img src="img/frutas.jpg" class="img-fluid rounded-top w-100 h-75" alt="Box de Fruta" />
-							<div class="card-body">
-							<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box de Fruta 🍏</h4>
-							<p class="text-muted text-center">Fruta fresca e da época, colhida em produtores locais.</p>
-
-							<div class="list-group my-3">
-								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'essential', this)">
-								<strong>Essential</strong> 1–2 px <span class="float-end fw-bold">20 €</span>
-								</button>
-								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'familiar', this)">
-								<strong>Familiar</strong> 3–4 px<span class="float-end fw-bold">30 €</span>
-								</button>
-								<button class="card shadow-sm h-100 plan-card" onclick="selectBox('fruta', 'premium', this)">
-								<strong>Premium</strong> Seleção especial	 <span class="float-end fw-bold">40 €</span>
-								</button>
-							</div>
-
-					<div class="text-center mt-4">
-						<button id="btn-fruta" class="btn btn-success w-100 d-none">🍎 Encomendar Box de Fruta</button>
-					</div>
-					</div>
-				</div>
-				</div>
-
-					</div>
-					<!-- ========= BOX DE LEGUMES ========= -->
-					<div
-						class="border border-primary rounded position-relative vesitable-item"
-					>
-						<div class="col-md-4">
-							<div class="card shadow-lg border-success h-100">
-								<img src="img/legumes.png" class="img-fluid rounded-top w-100  h-75" alt="Box de Legumes" />
-								<div class="card-body">
-								<h4 class="bg-success text-white p-3 rounded fw-bold text-center">Box de Legumes 🥕</h4>
-								<p class="text-muted text-center">Legumes frescos e folhas verdes diretos da horta.</p>
-
-								<div class="list-group my-3">
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'essential', this)">
-									<strong>Essential</strong>  Ideal para 1–2 px <span class="float-end fw-bold">20 €</span>
-									</button>
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'familiar', this)">
-									<strong>Familiar</strong> Para 3–4 px <span class="float-end fw-bold">30 €</span>
-									</button>
-									<button class="card shadow-sm h-100 plan-card" onclick="selectBox('legumes', 'premium', this)">
-									<strong>Premium</strong> Variedade + ervas<span class="float-end fw-bold">40 €</span>
-									</button>
-								</div>
-
-								<div class="text-center mt-4">
-									<button id="btn-legumes" class="btn btn-success w-100 d-none">🥕 Encomendar Box de Legumes</button>
-								</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					
-					
-				</div>
-			</div>
-		</div> 
-		</div>
 		<!-- Featurs Start -->
 		<section class="container py-5 d-none" id="sazonalidade">
 			<div class="text-center mb-5">
@@ -623,7 +508,61 @@
   </div>
 </section>
 		
+		<!-- About us -->
+			<section id="sobre-nos" class="py-5 bg-light">
+				<div class="container">
+					<div class="row align-items-center g-5">
 
+					<!-- Texto -->
+					<div class="col-lg-6">
+						<span class="badge bg-success mb-3">Quem somos</span>
+						<p class="text-muted mb-1">
+							Este projeto nasceu de um problema simples e muito comum:
+							querer fruta e legumes de qualidade, mas acabar sempre por
+							levar o que há — sem saber de onde vem, se é fresco ou se vale mesmo a pena.
+						</p>
+						
+						<p class="text-muted mb-2">
+							Criámos uma solução pensada para quem vive a rotina local,
+							trabalha a semana inteira e só quer chegar a casa com a certeza
+							de que está a fazer uma boa escolha — sem mercados cheios,
+							sem desperdício e sem surpresas.
+						</p>
+						<h4 class="fw-bold my-4">
+						Para quem quer comer melhor,<br class="d-none d-md-block">
+						sem perder tempo nem confiança
+						</h4>
+
+							<ul class="list-unstyled">
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Seleção semanal com critério e transparência
+							</li>
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Quantidades pensadas para a tua realidade
+							</li>
+							<li class="mb-1">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								Entrega certa, sempre ao sábado
+							</li>
+							</ul>
+						</div>
+
+					<!-- Imagem / Visual -->
+					<div class="col-lg-6 text-center">
+						<img
+						src="img/delivery.jpg"
+						alt="Fruta e legumes frescos"
+						class="img-fluid rounded-4 shadow-sm"
+						/>
+					</div>
+
+					</div>
+				</div>
+				</section>
+
+		<!-- About us End -->
 		<!-- Banner Section Start-->
 		<div class="container-fluid banner bg-dark my-5">
 			<div class="container py-5">
@@ -809,6 +748,71 @@
 
 
 			<!-- End Zonas Abrangidas -->
+			 <!-- Featurs Section Start -->
+		<div class="container-fluid featurs py-2">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="featurs-item text-center rounded bg-light p-4">
+							<div
+							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
+							>
+								<i class="fas fa-car-side fa-3x text-white"></i>
+							</div>
+							<div class="featurs-content text-center">
+								<h5>Entrega em casa</h5>
+								<p class="mb-0">Rapidez e Comodidade	</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="featurs-item text-center rounded bg-light p-4">
+							<div
+							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
+							>
+								<i class="fas fa-user-shield fa-3x text-white"></i>
+							</div>
+							<div class="featurs-content text-center">
+								<h5>Pagamento Seguro</h5>
+								<p class="mb-0">
+									Praticidade e segurança
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="featurs-item text-center rounded bg-light p-4">
+							<div
+								class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
+							>
+								<i class="fas fa-exchange-alt fa-3x text-white"></i>
+							</div>
+							<div class="featurs-content text-center">
+								<h5>Qualidade</h5>
+								<p class="mb-0">Da horta para a sua mesa</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="featurs-item text-center rounded bg-light p-4">
+							<div
+							class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto"
+							>
+								<i class="fa fa-phone-alt fa-3x text-white"></i>
+							</div>
+							<div class="featurs-content text-center">
+								<h5>Suporte Online</h5>
+								<p class="mb-0">
+									Suporte telefonico ou
+									WhatsApp
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Featurs Section End -->
 		<!-- MODAL -->
 			<!-- Modal do Quiz -->
 			<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
@@ -816,8 +820,7 @@
 				<div class="modal-content">
 
 					<div class="modal-header">
-					<h5 class="modal-title">🥕 Escolhe a tua box ideal</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    <h5 class="modal-title">🥕 Descobre a box ideal para ti</h5>
 					</div>
 
 					<div class="modal-body">
@@ -827,21 +830,21 @@
 
 					<!-- Perguntas -->
 					<div class="question active" id="q1">
-						<h5>Quantas pessoas há em casa?</h5>
+						<h5>Quantas pessoas vão usar a box?</h5>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '1pessoa')">🧍 1 pessoa</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '2a3')">👩‍👩‍👧 2 a 3 pessoas</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(1, '4mais')">👨‍👩‍👧‍👦 4 ou mais</button>
 					</div>
 
 					<div class="question" id="q2">
-						<h5>Preferes mais frutas, legumes ou equilíbrio?</h5>
+						<h5>Que tipo de mistura preferes na tua box?</h5>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'frutas')">🍎 Mais frutas</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'legumes')">🥕 Mais legumes</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(2, 'equilibrado')">🍇 Equilibrado</button>
 					</div>
 
 					<div class="question" id="q3">
-						<h5>Com que frequência gostarias de receber a tua box?</h5>
+						<h5>Com que frequência queres receber a box do Quintal do Zé?</h5>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'semanal')">📅 Uma vez por semana</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'quinzenal')">🗓️ A cada duas semanas</button>
 						<button class="btn btn-outline-success btn-option" onclick="handleAnswer(3, 'avulsa')">🚛 Só quando quiser</button>
@@ -858,7 +861,7 @@
 						<h4 class="mb-3">🎉 A tua box ideal é:</h4>
 						<div id="boxName" class="fs-5 fw-bold mb-3 text-success"></div>
 						<p id="boxDesc" class="mb-4"></p>
-						<a href="#" class="btn btn-success mb-3">Ver detalhes da box</a>
+							<a href="#box" id="resultLink" class="btn btn-success mb-3">Ir para a tua box</a>
 						<br>
 						<button class="btn btn-outline-secondary" onclick="resetQuiz()">🔄 Fazer novamente</button>
 					</div>
@@ -868,7 +871,7 @@
 			</div>
 		<!-- END MODAL -->
 		<!-- Footer Start -->
-		<section id="zonas" class="py-5 bg-light">
+		<section class="py-5 bg-light">
 			<footer class="bg-dark text-white pt-5">
 				<div class="container">
 				<!-- Linha principal -->
@@ -889,8 +892,8 @@
 				<div class="col-lg-4">
 					<h6 class="text-uppercase text-secondary mb-3">Explorar</h6>
 					<ul class="list-unstyled">
-					<li><i class="bi bi-box-seam me-2"></i> <a href="#boxes" class="text-white text-decoration-none">Boxes</a></li>
-					<li><i class="bi bi-person me-2"></i> <a href="#sobre-nos" class="text-white text-decoration-none">Quem está por trás</a></li>
+					<li><i class="bi bi-box-seam me-2"></i> <a href="#box" class="text-white text-decoration-none">Ver Box</a></li>
+					<li><i class="bi bi-person me-2"></i> <a href="#sobre-nos" class="text-white text-decoration-none">Quem Somos</a></li>
 					<li><i class="bi bi-map me-2"></i> <a href="#zonas" class="text-white text-decoration-none">Zonas de entrega</a></li>
 					<li><i class="bi bi-envelope me-2"></i> <a href="#contactos" class="text-white text-decoration-none">Contactos</a></li>
 					</ul>
