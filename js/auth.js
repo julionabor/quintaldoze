@@ -10,7 +10,7 @@ export async function initAuth0() {
 		console.log("Auth0 - Creating client with:", {
 			domain: import.meta.env.VITE_AUTH0_DOMAIN,
 			clientId: import.meta.env.VITE_AUTH0_CLIENT_ID,
-			redirect_uri: `${window.location.origin}/login.html`
+			redirect_uri: `${window.location.origin}/login.html`,
 		});
 
 		auth0Client = await createAuth0Client({
@@ -32,7 +32,7 @@ export async function initAuth0() {
 			const result = await handleRedirectCallback();
 			console.log("Redirect callback processed:", result);
 			// Aguarda um pouco para garantir que Auth0 processou
-			await new Promise(resolve => setTimeout(resolve, 500));
+			await new Promise((resolve) => setTimeout(resolve, 500));
 		}
 
 		return auth0Client;
@@ -71,7 +71,10 @@ export async function isAuthenticated() {
  * Verifica se está a vir de um callback Auth0
  */
 export function isAuthCallback() {
-	return window.location.search.includes('code=') && window.location.search.includes('state=');
+	return (
+		window.location.search.includes("code=") &&
+		window.location.search.includes("state=")
+	);
 }
 
 /**

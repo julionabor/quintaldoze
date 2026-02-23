@@ -11,7 +11,7 @@ export async function checkAuthentication() {
 		try {
 			await initAuth0();
 			// Aguarda um pouco para auth0 processar
-			await new Promise(resolve => setTimeout(resolve, 500));
+			await new Promise((resolve) => setTimeout(resolve, 500));
 			console.log("Auth0 callback processed");
 		} catch (err) {
 			console.error("Auth callback processing error:", err);
